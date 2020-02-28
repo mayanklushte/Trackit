@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/ap_detail.css" %}">
+            <link rel="stylesheet" href= "{% static "css/ap_detail.css" %}">
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+              <script type="text/javascript">
+                setInterval("my_function();",1000);
+                function my_function(){
+                  $('#refresh').load(location.href + ' #time');
+                }
+              </script>
+        {% endblock%}
+
+{% block body_block %}
+
+
+{% for i in list %}
+
+
+<div id="refresh">
+<div id="time">
+        {% for mess in message %}
+            {% if mess.sender == request.user %}
+            <div class="container" style="float: right;"><br>
+            {{ mess.sender }}:<br>
+            {{ mess.message }}<br>
+                <span style="float: right;">{{ mess.time }}</span><br>
+            <br><br>
+            </div><br><br><br><br><br><br><br>
+            {% else %}
+                <div class="container" style="float: left;"><br>
+            {{ mess.sender }}:<br>
+            {{ mess.message }}<br>
+                   <span style="float: right;">{{ mess.time }}</span>
+            <br><br>
+            </div><br><br><br><br><br><br><br>
+            {% endif %}
+        {% endfor %}
+
+</div>
+</div>
+
+
+        <form method="post" action="{% url 'uchat_d' i.pk %}">
+        {% csrf_token %}
+        {{ form }}<br>
+       <button class="btn-primary">chat</button>
+        </form>
+
+
+{% endfor %}
+
+
+{% endblock%}

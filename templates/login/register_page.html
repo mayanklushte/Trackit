@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends "base4.html" %}
+{% load static %}
+        {% block stylesheet %}
+
+           <link rel="stylesheet" href="{%  static "css/register.css" %}">
+
+        {% endblock%}
+
+{% block body_block %}
+
+
+
+
+<div class="container1">
+<center><h1>Registration Form</h1></center><br><br>
+
+    <form enctype="multipart/form-data" method="POST">
+        {{ form_p.as_p }}
+        <label>Mobile No:</label><br>
+        {{ form.moblie_no }}
+        <label>Company Name:</label><br>
+        {{ form.company_name }}
+        <!-- <label>Address:</label><br>
+        {{ form.address }}
+        <label>State:</label><br>
+        {{ form.state }}
+        <label>Pin Code:</label><br>
+        {{ form.pincode }}
+        <label>Age:</label><br>
+        {{ form.age}}
+        <label>Sex:</label><br>
+        {{ form.sex }}
+        <label>Profile Photo:</label><br>
+        <div class="btn btn-primary btn-file">
+            Choose Image
+            {{ form.profile_photo }}
+        </div>-->
+    {% csrf_token %}
+    <center><button type="submit" class="btn btn-light">Submit</button></center>
+    </form>
+
+</div>
+
+
+{% endblock%}

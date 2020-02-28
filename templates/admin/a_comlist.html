@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/acc_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<center>
+ {% for i in list %}
+    {% if i.status == True %}
+     <a href="/a_comlist/{{ i.id }}/">
+     <div class="card">
+
+           &nbsp&nbsp&nbspCompany Name: {{ i.company_Name }}<br>
+           &nbsp&nbsp&nbspProject Name: {{ i.project_name }}<br>
+     </div></a>
+        {% else %}
+
+     <div class="card">
+
+           Company Name: {{ i.company_Name }}<br>
+           Project Name: {{ i.project_name }}<br>
+              &nbsp&nbspproject request was not accepted
+     </div>
+     {% endif %}
+{% endfor %}</center>
+</div>
+{% endblock%}
+
+
+

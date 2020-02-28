@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'base4.html' %}
+{% load static %}
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/login.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+  <div class="container1">
+
+      <center><h3>Login</h3></center>
+
+        <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <label for="username">&nbspUsername:</label>
+          <input type="text" name="username" placeholder="Username"><br>
+
+          <label for="password">Password</label><br>
+          <input type="password" name="password"><br>
+            <br>
+          <center><button type="submit" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbspLogin&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+            <br><br>
+
+            <a href="{% url 'registers' %}" class="btn-primary"> Register Now</a>
+            </center>
+        </form>
+  </div>
+{% endblock %}

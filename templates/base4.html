@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Track IT</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{% static "css/base3.css" %}">
+        {% block stylesheet %}
+
+        {% endblock%}
+
+        <style>
+
+            .si{
+                margin-top: 80px;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 160px;
+                position: fixed;
+                z-index: 1;
+                top: 7.5%;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                padding-top: 20px;
+                ;
+            }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                border-top:  1px solid white;
+                border-bottom: 1px solid white;
+            }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+            body {
+
+                background-color: #E6E6FA;
+
+
+            }
+
+
+
+        {% block style_block %}
+
+        {% endblock%}
+
+        </style>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+    <nav class="navbar  navbar-inverse navbar-fixed-top">
+
+  <div class="container-fluid">
+      <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        <a class="navbar-brand" href="{% url 'index' %}">&nbspTrack It </a>
+      </div>
+  <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav">
+        <li class=""><a href="{% url 'index' %}"><span class="glyphicon glyphicon-home"></span>&nbspHome</a></li>
+        </ul>
+   <ul class="nav navbar-nav navbar-right">
+       {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-in"></span>&nbspLogout</a></li>
+
+       {% endif %}
+    </ul>
+    </div>
+    </div>
+
+</nav>
+
+    <div class="si">
+
+    </div>
+
+
+        {% block body_block %}
+
+
+        {% endblock%}
+
+
+
+    </body>
+
+</html>

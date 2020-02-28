@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/ap_detail.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+{% for i in listsq %}
+    {% if user.is_superuser %}
+        <div class="container">
+            <br>
+               Company Name: {{ i.company_Name }}<br>
+               Project Name: {{ i.project_name }}<br>
+               Technology: {{ i.technology }}<br>
+               Domain: {{ i.Domain }}<br>
+                Requirements: {{ i.requirements }}<br><br>
+            <div><a href="{% url 'calendar' %}"><button class="btn-primary">Track your progress</button></a></div><br><br>
+        </div>
+
+    {% endif %}
+
+{% endfor %}
+
+</div>
+{% endblock%}

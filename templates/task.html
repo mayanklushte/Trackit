@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base3.html' %}
+{% load static %}
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/login.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+  <div class="container1">
+
+
+
+        <form method="post" action="{% url 'task' %}">
+          {% csrf_token %}
+
+          {{  form.as_p }}
+            <br>
+          <center><button type="submit" class="btn btn-primary">submit</button>
+
+
+
+            </center>
+        </form>
+  </div>
+{% endblock %}

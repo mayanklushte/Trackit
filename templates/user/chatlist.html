@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/acc_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+{% for c in list %}
+    <center>
+
+
+
+     <a href="/chat/{{ c.id }}/">
+     <div class="card">
+
+           &nbsp&nbsp&nbspadmin: {{ c.username}}<br>
+
+     </div></a>
+
+    </center>
+    {% for i in list1 %}
+    <center>
+
+
+
+     <a href="/chat/{{ i.receiver_r.id }}/">
+     <div class="card">
+
+           &nbsp&nbsp&nbspadmin: {{ i.receiver_r}}<br>
+
+     </div></a>
+
+    </center>
+{% endfor %}
+
+{% endfor %}
+
+
+
+</div>
+{% endblock%}

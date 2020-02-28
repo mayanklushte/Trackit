@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "mi-add/base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/acc_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<center>
+ {% for i in list %}
+
+     <a href="/ap_list/{{ i.id }}/">
+     <div class="card">
+
+           &nbsp&nbsp&nbspCompany Name: {{ i.company_Name.company_name }}<br>
+           &nbsp&nbsp&nbspProject Name: {{ i.project_name }}<br>
+
+     </div></a>
+
+{% endfor %}</center>
+</div>
+{% endblock%}

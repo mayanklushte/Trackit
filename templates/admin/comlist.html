@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/acc_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<center>
+ {% for i in list %}
+
+     <a href="/comlist/{{ i.id }}/">
+     <div class="card">
+
+           &nbsp&nbsp&nbspCompany Name: {{ i.company_name }}<br>
+           &nbsp&nbsp&nbspUser Name: {{ i.user.first_name }}<br>
+
+     </div></a>
+
+{% endfor %}</center>
+</div>
+{% endblock%}
+
+
+

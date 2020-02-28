@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/acc_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+    {% if list %}
+    {% for i in list %}
+    <a href="/u_event/{{ i.id }}/">
+     <div class="container">
+         <br>
+
+        Company Name: {{ i.company_Name }}<br>
+        Event Title: {{ i.title }}<br><br>
+
+     </div></a><br>
+    {% endfor %}
+
+    {% endif %}
+
+</div>
+{% endblock%}

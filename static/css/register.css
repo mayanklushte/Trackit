@@ -1,0 +1,417 @@
+ input[type=text],[type="password"] {
+     width: 100%;
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+ }
+
+ form input[name='email']{
+     width: 100%;
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+ }
+
+ form input[name='age']{
+     width: 100%;
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+ }
+
+ form [name="sex"]{
+     width: 100%;
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+ }
+
+ input [type=File]{
+     background-color: #2b669a;
+ }
+
+ label{
+     margin-top: 20px;
+ }
+ form [name="profile_photo"]{
+
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+     background-color: #FFFFFF;
+
+ }
+
+ .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+ input[type=file] {
+     position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 50%;
+    min-height: 50%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+ .btn-primary{
+     background-color: white;
+     width: 30%;
+     margin-top: 10px;
+     margin-bottom: 15px;
+     padding: 7px;
+     border: 1px solid black;
+     border-radius: 100px;
+     color: black;
+
+ }
+
+ .btn-light{
+     background-color: #407DCB;
+     color: black;
+ }
+
+
+ #upload{
+     background-color: black;
+ }
+ .container1 {
+     box-sizing: content-box;
+     width:60%;
+     height:3%;
+     padding: 2%;
+     border: 1px;
+     margin: auto;
+     border-radius: 5%;
+     background-color: #FFFFFF;
+     box-shadow: 0 8px 16px 0 #2b669a;
+     margin-bottom: 20px;
+ }
+
+
+
+@media only screen and (max-width: 1119px) {
+input[type=text],[type="password"] {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+form input[name="age"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="open_time"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="sex"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="close_time"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+form [name="profile_photo"]{
+
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+     background-color: #FFFFFF;
+
+ }
+
+form [name="close_day"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='email']{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 3%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+input[type=text],[type="password"] {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+form input[name="age"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="profile_photo"]{
+
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+     background-color: #FFFFFF;
+
+ }
+
+form [name="open_time"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="sex"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="close_time"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="close_day"]{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='email']{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 3%;
+        background-color: #FFFFFF;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+input[type=text],[type="password"] {
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+form input[name="age"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="profile_photo"]{
+
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+     background-color: #FFFFFF;
+
+ }
+
+form [name="open_time"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="sex"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="close_time"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="close_day"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='email']{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 2%;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    input[type=text],[type="password"] {
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+form input[name="age"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="profile_photo"]{
+
+     margin-bottom: 5px;
+     padding: 7px;
+     border: 1px solid lightgrey;
+     border-radius: 100px;
+     background-color: #FFFFFF;
+
+ }
+
+form [name="open_time"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="sex"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="close_time"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form [name="close_day"]{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+form input[name='email']{
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+    div.container1 {
+        box-sizing: content-box;
+        width:80%;
+        height:1%;
+        padding: 2%;
+        border: 1px solid black;
+        margin: auto;
+        border-radius: 5%;
+    }
+
+
+}

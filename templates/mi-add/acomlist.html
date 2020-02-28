@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends "mi-add/base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/acc_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+<center>
+{% for j in list2 %}
+
+     <a href="/chat/{{ j.id }}/">
+     <div class="card">
+
+           &nbsp&nbsp&nbspCompany Name: {{j.username }}<br>
+
+
+     </div></a>
+
+{% endfor %}
+ {% for i in list %}
+
+     <a href="/ma_chat/{{ i.id }}/">
+     <div class="card">
+
+           &nbsp&nbsp&nbspCompany Name: {{ i.company_Name }}<br>
+           &nbsp&nbsp&nbspUser Name: {{ i.company_Name.user.username }}<br>
+
+     </div></a>
+
+{% endfor %}</center>
+</div>
+{% endblock%}
+
+
+

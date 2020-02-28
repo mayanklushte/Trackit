@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base3.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/ap_detail.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+<div class="container">
+    <br>
+
+       Project Name: {{ j.project_name }}<br>
+       Technology: {{ j.technology }}<br>
+       Domain: {{ j.Domain }}<br>
+        Requirements: {{ j.requirements| linebreaks }}<br><br>
+
+</div>
+
+
+
+
+
+</div>
+{% endblock%}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/acc_list.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+    <center>
+    <form method="get" action="" class="form-inline my-2 my-lg-0">
+      <input
+       type="search"
+        aria-label="Search"
+       placeholder="Serach for Company Name"
+       name="q"
+
+      >
+        <button class="btn btn-warning" type="submit">Search</button>
+    </form><br>
+
+ {% for i in list %}
+
+    <a href="/r_com/{{ i.id }}/">
+     <div class="card">
+         <br>
+
+           &nbsp&nbsp&nbspCompany Name : {{ i.company_name }}<br>
+           &nbsp&nbsp&nbspMobile No. : {{ i.moblie_no}}<br>
+         <br>
+     </div></a>
+{% endfor %}
+    </center>
+</div>
+{% endblock%}

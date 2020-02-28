@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "mi-add/base.html" %}
+{% load static %}
+
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href= "{% static "css/ap_detail.css" %}">
+        {% endblock%}
+
+{% block body_block %}
+<div class="container1">
+
+
+        <div class="container">
+            <br>
+               Company Name: {{ list.company_Name }}<br>
+               Title: {{ list.title }}<br>
+               Description: {{ list.description }}<br>
+               Start Time: {{ list.start_time }}<br>
+                End Time: {{ list.end_time }}<br><br>
+
+        </div>
+
+
+</div>
+{% endblock%}
